@@ -1,0 +1,13 @@
+# AWS account
+ssm_app   = "modulestf"
+ssm_stage = "dev"
+
+######
+name     = "modulestf"
+vpc_cidr = "10.37.0.0/20"
+
+route53_zone_name = "modules.tf"
+
+#####
+
+thundra_api_key = ""
