@@ -28,14 +28,14 @@ variable "vpc_cidr" {
 
 variable "dl_bucket_name" {
   description = "Name of S3 bucket for downloads (should not include route53_zone_name)"
-  type = string
-  default = null
+  type        = string
+  default     = null
 }
 
 variable "thundra_api_key" {
   description = "Thundra API key (secret)"
-  type = string
-  default = null
+  type        = string
+  default     = null
 }
 
 variable "ssm_app" {

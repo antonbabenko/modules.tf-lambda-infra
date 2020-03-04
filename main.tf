@@ -36,7 +36,7 @@ locals {
     thundra_api_key = {
       description = "Thundra API Key"
       value       = var.thundra_api_key
-      type = "SecureString"
+      type        = "SecureString"
     }
   }
 
@@ -143,9 +143,9 @@ module "dl_bucket" {
   source  = "terraform-aws-modules/s3-bucket/aws"
   version = "~> 1.0"
 
-  bucket                         = var.dl_bucket_name
-  acl                            = "private"
-  force_destroy                  = true
+  bucket        = var.dl_bucket_name
+  acl           = "private"
+  force_destroy = true
 
   lifecycle_rule = [
     {
