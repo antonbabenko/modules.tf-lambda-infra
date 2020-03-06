@@ -179,6 +179,8 @@ module "dl_bucket" {
   acl           = "private"
   force_destroy = true
 
+  block_public_policy = true
+
   cors_rule = {
     allowed_methods = ["GET"]
     allowed_origins = ["*"]
