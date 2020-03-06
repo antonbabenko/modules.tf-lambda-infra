@@ -1,13 +1,10 @@
-# AWS account
-ssm_app   = "modulestf"
-ssm_stage = "dev"
-
-######
-name     = "modulestf"
-vpc_cidr = "10.37.0.0/20"
+allowed_account_ids = ["111111111111"]
 
 route53_zone_name = "modules.tf"
+route53_env_hosts = ["prod-alb", "dev-alb"]   # List of Route53 names (subdomains) for prod and dev environments
 
-#####
+vpc_cidr = "10.37.0.0/20"
 
-thundra_api_key = ""
+dl_bucket_name = "dl.modules.tf"
+
+thundra_api_key = "..."

@@ -2,14 +2,7 @@
 .terraform
 .terragrunt-cache
 *.tfstate*
-terraform.tfvars
-
-# Secrets are not allowed in general
-*.key
-*.pem
-
-# Secrets are encrypted using git-crypt
-!secrets/*
+*.tfvars
 
 # OS X
 .history
