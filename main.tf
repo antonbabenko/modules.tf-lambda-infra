@@ -175,10 +175,9 @@ module "dl_bucket" {
 
   create_bucket = var.create_dl_bucket
 
-  bucket        = var.dl_bucket_name
-  acl           = "private"
-  force_destroy = true
-
+  bucket              = var.dl_bucket_name
+  acl                 = "private"
+  force_destroy       = true
   block_public_policy = true
 
   cors_rule = {
