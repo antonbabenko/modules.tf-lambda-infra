@@ -1,4 +1,4 @@
-# modules.tf-infra
+# modules.tf-lambda-infra
 
 This repository contains Terraform configurations required to provision AWS infrastructure for modules.tf:
 
