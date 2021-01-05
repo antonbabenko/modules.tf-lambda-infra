@@ -30,28 +30,36 @@ $ make betajob
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12.23 |
+| aws | >= 2.0 |
+| random | >= 2.2 |
+
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | ~> 2.0 |
-| random | ~> 2.2 |
+| aws | >= 2.0 |
+| random | >= 2.2 |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | allowed\_account\_ids | List of allowed AWS acount ids where infrastructure will be created | `list(string)` | n/a | yes |
 | aws\_region | AWS region where infrastructure will be created | `string` | `"eu-west-1"` | no |
 | create\_dl\_bucket | Whether to create S3 bucket for downloads | `bool` | `false` | no |
-| dl\_bucket\_name | Name of S3 bucket for downloads (should not include route53\_zone\_name) | `string` | n/a | yes |
+| dl\_bucket\_name | Name of S3 bucket for downloads (should not include route53\_zone\_name) | `string` | `null` | no |
 | name | Name or prefix for many related resources | `string` | `"modulestf"` | no |
-| public\_subnets | List of existing public subnets to use | `list(string)` | n/a | yes |
+| public\_subnets | List of existing public subnets to use | `list(string)` | `null` | no |
 | route53\_env\_hosts | List of Route53 names (subdomains) for prod and dev environments | `list(string)` | `[]` | no |
 | route53\_zone\_name | Zone name for ALB and ACM | `string` | n/a | yes |
 | ssm\_prefix | Prefix to use in SSM key | `string` | `"modulestf"` | no |
-| thundra\_api\_key | Thundra API key (secret) | `string` | n/a | yes |
-| vpc\_cidr | VPC CIDR block | `string` | n/a | yes |
+| thundra\_api\_key | Thundra API key (secret) | `string` | `null` | no |
+| vpc\_cidr | VPC CIDR block | `string` | `null` | no |
 | vpc\_id | Existing VPC ID to use | `string` | `""` | no |
 
 ## Outputs
